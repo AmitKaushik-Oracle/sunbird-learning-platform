@@ -10,3 +10,4 @@ logstash_version: 6.3.1
 logstash_systemd_service: /etc/systemd/system/logstash.service
 logstash_jvm_opts: "-Xms1g -Xmx1g"
 # logstash_java_home: "JAVA_HOME=/opt/jdk-11"
+logstash_java_home: "JAVA_HOME=/opt/jdk1.8.0_121"
