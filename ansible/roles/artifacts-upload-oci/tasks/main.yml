@@ -1,0 +1,8 @@
+---
+- name: Ensure OCI Bucket exists
+  command: oci os bucket get -bn {{{ artifacts_container }}
+
+- name: Upload to OCI Object Storage 
+  command: oci os object put -bn {{ artifacts_container }} --name {{ artifact }} --file {{ artifact_path }}
+  async: 3600
+  poll: 10
